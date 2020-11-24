@@ -3,14 +3,14 @@ node
     
     stage('CheckoutCOde')
     {
-      git credentialsId: 'ea0f21ea-4c9a-411f-8f31-49f825993d6c', url: 'https://github.com/bhaskar0504/node-js-application.git'  
+      git credentialsId: 'ea0f21ea-4c9a-411f-8f31-49f825993d6c', url: 'https://github.com/bharnaya/angulalr-node-js.git'  
         
     }
     
     stage('Build')
     {
         
-     nodejs(nodeJSInstallationName: 'nodejs15.2.1'){
+     nodejs(nodeJSInstallationName: 'nodejs'){
          sh "npm install"  
      } 
     }
@@ -19,7 +19,7 @@ node
     stage('ExecuteSonarQubeReport')
     {
         
-     nodejs(nodeJSInstallationName: 'nodejs15.2.1'){
+     nodejs(nodeJSInstallationName: 'nodejs'){
          sh "npm run sonar"  
      } 
     }
@@ -27,7 +27,7 @@ node
     stage('RunNodeJsApp')
     {
         
-     nodejs(nodeJSInstallationName: 'nodejs15.2.1'){
+     nodejs(nodeJSInstallationName: 'nodejs'){
          sh "npm start &"  
      } 
     }
