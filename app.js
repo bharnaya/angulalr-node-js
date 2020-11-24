@@ -43,10 +43,10 @@ app.get("/html", function(req,res){
         res.type('json');
         //res.type('application/json');
         //res.json({'name': 'Mithun Reddy L'});
-        res.send({'name': 'Mithun Reddy L',
+        res.send({'name': 'Bharathi',
 		          'technology': 'DevOps',
-		          'Phone': '+91 99809 23216',
-		          'email': 'bhaskar0504@gmail.com'
+		          'Phone': '+91 99809 73334',
+		          'email': 'mbnayak@gmail.com'
 	            });
         
         });
